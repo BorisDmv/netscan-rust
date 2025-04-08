@@ -20,11 +20,9 @@ A simple command-line interface (CLI) tool written in Rust for basic network sca
 
 1.  **Clone the repository:**
     ```bash
-    # Replace with your actual repository URL if you host it on Git
-    git clone https://your-repository-url/netscan-cli.git
-    cd netscan-cli
+    git clone git@github.com:BorisDmv/netscan-rust.git
+    cd netscan-rust
     ```
-    *(If you don't have a Git repository, just navigate to the project directory containing `Cargo.toml`)*
 
 2.  **Build the project:**
     For a release build (optimized):
@@ -37,8 +35,8 @@ A simple command-line interface (CLI) tool written in Rust for basic network sca
     ```
 
 3.  **Locate the executable:**
-    * The release executable will be at `target/release/netscan-cli` (or your project's name).
-    * The debug executable will be at `target/debug/netscan-cli`.
+    * The release executable will be at `target/release/netscan-rust`.
+    * The debug executable will be at `target/debug/netscan-rust`.
 
 ## Usage
 
@@ -46,10 +44,10 @@ Run the compiled executable from your terminal:
 
 ```bash
 # If built in release mode
-./target/release/netscan-cli
+./target/release/netscan-rust
 
 # Or if built in debug mode
-./target/debug/netscan-cli
+./target/debug/netscan-rust
 
 # On Windows (adjust path slashes if needed)
-.\target\release\netscan-cli.exe
+.\target\release\netscan-rust.exe
