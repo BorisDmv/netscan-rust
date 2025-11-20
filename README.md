@@ -1,20 +1,24 @@
-# NetScan CLI - Rust Port Scanner & Pinger
+# NetScan CLI - Rust Network Scanner & Pinger
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-A simple command-line interface (CLI) tool written in Rust for basic network scanning tasks, including port scanning and host reachability checks (ping).
+A simple command-line interface (CLI) tool written in Rust for basic network scanning tasks, including port scanning across IP ranges and host reachability checks (ping).
 
 ## Features
 
-* **Port Scanning:** Scan a range of TCP ports on a target IP address to identify open ports.
-* **Customizable Port Range:** Set the minimum and maximum ports for scanning via the interactive menu. Defaults to common ports (1-1024).
+* **Port Scanning:** Scan a custom list of TCP ports on a single IP or across an IPv4 range to identify open ports.
+* **Customizable Port List:** Enter a comma-separated list of ports to scan (e.g. `22,80,443`).
+* **IPv4 Range Scanning:** Scan multiple IPv4 addresses by specifying a start and end IP.
 * **Host Reachability (Ping):** Check if a target host is reachable using ICMP echo requests (ping).
-* **Interactive Menu:** Easy-to-use menu system for selecting actions.
+* **Interactive Menu:** Easy-to-use menu system for selecting actions:
+    1. Check if a host is reachable (Ping)
+    2. Scan ports on a range of IPs
+    3. Exit
 * **Colorized Output:** Uses terminal colors for better readability of open/closed ports and status messages.
 
 ## Requirements
 
 * **Rust Toolchain:** You need `rustc` and `cargo` installed. The recommended way to install is via [rustup](https://rustup.rs/).
-* **Permissions (for Ping):** The ping functionality (sending/receiving ICMP packets) often requires elevated privileges on most operating systems. You might need to run the application using `sudo` (on Linux/macOS) or as an Administrator (on Windows) for the ping option (Option 2) to work correctly. Port scanning usually doesn't require special permissions.
+* **Permissions (for Ping):** The ping functionality (sending/receiving ICMP packets) often requires elevated privileges on most operating systems. You might need to run the application using `sudo` (on Linux/macOS) or as an Administrator (on Windows) for the ping option (Option 1) to work correctly. Port scanning usually doesn't require special permissions.
 
 ## Installation & Building
 
